@@ -1,0 +1,12 @@
+
+{
+  "intents": [
+    {
+      "intent": "ExampleIntent"
+    },
+
+    {
+      "intent": "AMAZON.HelpIntent"
+    }
+  ]
+}
