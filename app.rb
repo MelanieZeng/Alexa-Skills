@@ -139,6 +139,39 @@ class CustomHandler < AlexaSkillsRuby::Handler:
     update_status "HERE"
   end
 
+  on_intent("BE_RIGHT_BACK") do
+    # add a response to Alexa
+    response.set_output_speech_text("I've updated your status to Be Right back ")
+    # create a card response in the alexa app
+    response.set_simple_card("Out of Office App", "Status is be right back.")
+    # log the output if needed
+    logger.info 'Be right back processed'
+    # send a message to slack
+    update_status "BE_RIGHT_BACK"
+  end
+
+  on_intent("GONE_HOME") do
+    # add a response to Alexa
+    response.set_output_speech_text("I've updated your status to Gone home ")
+    # create a card response in the alexa app
+    response.set_simple_card("Out of Office App", "Status is gone home.")
+    # log the output if needed
+    logger.info 'Gone home processed'
+    # send a message to slack
+    update_status "GONE_HOME"
+  end
+
+  on_intent("DO_NOT_DISTURB") do
+    # add a response to Alexa
+    response.set_output_speech_text("I've updated your status to Do not disturb ")
+    # create a card response in the alexa app
+    response.set_simple_card("Out of Office App", "Status is do not disturb.")
+    # log the output if needed
+    logger.info 'Do not disturb processed'
+    # send a message to slack
+    update_status "DO_NOT_DISTURB"
+  end
+
   on_intent("BackIn") do
   
     # Access the slots
