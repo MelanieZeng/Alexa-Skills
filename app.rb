@@ -127,7 +127,7 @@ def post_to_slack status_update, message
   
 end 
 
-class CustomHandler < AlexaSkillsRuby::Handler:
+class CustomHandler < AlexaSkillsRuby::Handler
   on_intent("HERE") do
     # add a response to Alexa
     response.set_output_speech_text("I've updated your status to Here ")
